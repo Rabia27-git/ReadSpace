@@ -1,0 +1,258 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+  
+.dashboard {
+    min-height: 100vh;
+    background: linear-gradient(to right, #f5e0c0, #c9e2f4);
+}  
+
+.dashboard #header{
+    display: flex;
+    justify-content: space-around;
+}
+
+@font-face{
+    font-family: 'DashboardHeading';
+    src: url('./fonts/CalSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'DashboardText';
+    src: url('./fonts/Simonetta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.dashboard #header h1{
+    font-family: "DashboardHeading",sans-serif;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 50px;
+}
+
+.dashboard #header #input-and-btn{
+    display: flex;
+}
+
+.dashboard #header #input-and-btn input{
+    margin-top: 20px;
+    width: 265px;
+    height: 50px;
+}
+
+.dashboard #header #input-and-btn #searchBtn{
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: 3px solid #d5a359;
+    background-color: #f5e0c0;
+    color: black;
+    font-size: 20px;
+}
+
+.dashboard #header #buttons #clubsButton{
+    background-color: #104077;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 18px;
+    width: 120px;
+    font-family: "DashboardHeading",sans-serif;
+}
+
+.dashboard #header #buttons #clubsButton:hover, 
+.dashboard #header #buttons #profileBtn:hover{
+    transform: scale(1.1);
+}
+
+.dashboard #header #buttons #profileBtn{
+    background-color: #104077;;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 18px;
+    width: 130px;
+    font-family: "DashboardHeading",sans-serif;
+    margin-left: 20px;
+    height: 55px;
+}
+
+.dashboard .tab-container {
+    width: 1100px;
+    margin: 30px auto;
+    font-family: sans-serif;
+}
+  
+.dashboard .tab-headers {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+}
+  
+.dashboard .tab-header {
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius:8px;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+  
+.dashboard .tab-header:hover {
+    background-color: #ddd;
+}
+  
+.dashboard .tab-header.active {
+    background-color: #092047;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+  
+.dashboard .tab-content {
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(to right, #f9e9df, #daeefc);
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard .book-card1, 
+.dashboard .book-card2,
+.dashboard .book-card3{
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.dashboard .book-card1:hover, 
+.dashboard .book-card2:hover,
+.dashboard .book-card3:hover{
+    transform: translateY(-5px);
+}
+
+.dashboard .book-card1 img,
+.dashboard .book-card2 img,
+.dashboard .book-card3 img{
+    width: 180px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.dashboard .book-card1 .book-info1 h3,
+.dashboard .book-card2 .book-info2 h3,
+.dashboard .book-card3 .book-info3 h3{
+    color: #08314e;
+    font-family: "DashboardHeading",sans-serif;
+    font-size: 24px;
+    margin-bottom: 4px;
+    margin-top: 5px;
+}
+
+.dashboard .book-card1 .book-info1 p, 
+.dashboard .book-card2 .book-info2 p, 
+.dashboard .book-card3 .book-info3 p{
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.dashboard .book-card1 .book-info1 p:last-child{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dashboard .book-card3 .book-info3 #startReadingBtn,  
+.dashboard .book-card3 .book-info3 #removeWantToReadBookBtn,
+.dashboard .book-card2 .book-info2 #doneReading,
+.dashboard .book-card2 .book-info2 #removeInProgressBook{
+    border-radius: 10px;
+    margin-right: 9px;
+    background-color: #08314e;
+    color: white;
+    border: none;
+    height: 30px;
+    transition: transform 0.3s ease;
+    margin-top: 4px;
+}
+
+.dashboard .book-card3 .book-info3 #startReadingBtn:hover, 
+.dashboard .book-card3 .book-info3 #removeWantToReadBookBtn:hover,
+.dashboard .book-card2 .book-info2 #doneReading:hover,
+.dashboard .book-card2 .book-info2 #removeInProgressBook:hover{
+    transform: scale(1.1);
+}
+
+.dashboard .book-card2 .book-info2 #pageInput{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.dashboard .book-card2 .book-info2 #pageInput input{
+    width: 50px;
+    height: 25px;
+    font-size: 13px;
+}
+
+.dashboard .modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+  
+.dashboard .modal-content{
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+  
+.dashboard .stars{
+    margin: 15px 0;
+}
+  
+.dashboard #submitRatingBtn, #cancelRatingBtn{
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+  
+.dashboard #submitRatingBtn{
+    background-color: #3498db;
+    color: white;
+}
+  

@@ -1,0 +1,123 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.landingPage{
+    min-height: 100vh;
+    background: linear-gradient(to right, #f5e0c0,#c9e2f4);
+    padding-top: 15px;
+}
+
+.landingPage #twoButtons{
+    display: flex;
+    column-gap: 15px;
+    justify-content: flex-end;
+}
+
+.landingPage #twoButtons button:last-child {
+    margin-right:30px; 
+}
+
+@font-face{
+    font-family: 'LandingPageLabels';
+    src: url('./fonts/Simonetta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.landingPage button{
+    background-color: #092047;
+    font-family: "LandingPageLabels",sans-serif;
+    border: none;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.landingPage button a {
+    color: white;
+    text-decoration: none;
+}
+  
+.landingPage #textPic{
+    display: flex;
+    margin-top: 25px;
+    column-gap: 70px;
+}
+
+.landingPage #text{
+    margin-left: 60px;
+    color:#092047;
+    width: 750px;
+}
+
+.landingPage #heading{
+    font-family: "LandingPageLabels",sans-serif;
+    font-size: 55px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.landingPage #para{
+    font-family: "LandingPageLabels",sans-serif;
+    font-size: 18px;
+    font-weight:600;
+    line-height: 29px;
+}
+
+.landingPage #para:last-child{
+    font-size: 25px;
+    background-color: #eab76b;
+    display: inline-block; 
+    padding: 0.3rem 0.6rem; 
+    border-radius: 5px; 
+    margin-top: 1rem;
+}
+
+.landingPage #twoButtons button:hover{
+    transform: scale(1.1); /* This will increase both the X and Y axes by 10% */
+    transition: transform 0.3s ease; 
+}
+
+.landingPage #cards{
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 30px;
+    margin-top: 40px;
+}
+
+.landingPage #cards .card:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+}
+
+.landingPage .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+
+.landingPage #textPic img{
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 4px solid #aacbe1;
+    border-radius: 50%
+}
+
+
